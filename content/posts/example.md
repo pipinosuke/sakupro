@@ -2,7 +2,7 @@
 title: "Lorem ipsum"
 path: "/demo"
 tags: ["Demo"]
-featuredImage: "./cover.jpg"
+featuredImage: "../assets/thumbs/cover.jpg"
 excerpt: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
 created: 2019-07-22
 updated: 2019-07-22

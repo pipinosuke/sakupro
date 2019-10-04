@@ -10,14 +10,14 @@ module.exports = {
         path: '/'
       },
       {
-        name: 'Example',
-        path: '/page'
+        name: 'About',
+        path: '/about'
       },
     ],
     footerMenu: [
       {
-        name: 'Example',
-        path: '/page'
+        name: 'About',
+        path: '/about'
       },
     ],
     search: true,

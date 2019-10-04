@@ -1,7 +1,7 @@
 ---
-title: Sample page
-path: "/page"
-excerpt: A sample page.
+title: About
+path: "/about"
+excerpt: Ahiu.
 ---
 
 ## Dicta tela magis
