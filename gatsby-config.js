@@ -38,6 +38,7 @@ module.exports = {
     }
   },
   plugins: [
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `@nehalist/gatsby-theme-nehalem`,
       options: {
