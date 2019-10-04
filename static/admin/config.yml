@@ -13,6 +13,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "File Name", name: "path", widget: "string"}
       - {label: "Publish Date", name: "created", widget: "date"}
       - {label: "Description", name: "excerpt", widget: "text"}
       - {label: "Featured Image", name: "featuredImage", widget: image}
