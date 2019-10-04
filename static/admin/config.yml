@@ -16,6 +16,6 @@ collections:
       - {label: "File Name", name: "path", widget: "string"}
       - {label: "Publish Date", name: "created", widget: "date"}
       - {label: "Description", name: "excerpt", widget: "text"}
-      - {label: "Featured Image", name: "featuredImage", widget: image}
+      - {label: "Featured Image", name: "featuredImage", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
