@@ -2,11 +2,12 @@
 title: Lorem ipsum
 path: /demo
 created: 2019-07-22T00:00:00.000Z
+updated: 2019-10-05T00:00:00.000Z
 excerpt: >-
   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
   eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
   voluptua.
-featuredImage: /static/pawapuro.jpg
+featuredImage: ../assets/thumbs/pawapuro.jpg
 tags:
   - Demo
 ---
