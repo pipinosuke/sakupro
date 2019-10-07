@@ -35,7 +35,10 @@ module.exports = {
         github: `https://github.com/nehalist`,
         twitch: ``
       }
-    }
+    },
+    adsense: {
+      title: `vimfoiv`
+    },
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
