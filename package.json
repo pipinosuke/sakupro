@@ -17,7 +17,7 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "@nehalist/gatsby-theme-nehalem": "^1.0.3",
+    "@pipinosuke/gatsby-theme-nehalem": "^1.0.0",
     "gatsby": "^2.13.55",
     "gatsby-plugin-netlify-cms": "^4.1.21",
     "netlify-cms-app": "^2.9.7",
