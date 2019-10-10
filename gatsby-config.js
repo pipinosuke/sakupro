@@ -26,7 +26,7 @@ module.exports = {
       description: `サクプロです。`,
       social: {
         facebook: ``,
-        twitter: `https://twitter.com/nehalist`,
+        twitter: ``,
         linkedin: ``,
         instagram: ``,
         youtube: ``,
@@ -46,7 +46,7 @@ module.exports = {
         manifest: {
           name: `nehalem - A Gatsby theme`,
           short_name: `nehalem`,
-          start_url: `/`,
+          start_url: ``,
           background_color: `#a4cbb8`,
           theme_color: `#a4cbb8`,
           display: `minimal-ui`,

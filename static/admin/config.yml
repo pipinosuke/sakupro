@@ -3,7 +3,7 @@ backend:
   branch: master
 
 media_folder: content/assets/thumbs
-public_folder: /static
+public_folder: static
 
 collections:
   - name: "post"
