@@ -1,3 +1,4 @@
+# ざっくりとしたジャンル分け
 - name: 開発環境構築
   color: "#007acc"
   icon: ./assets/images/tags/develop.png
@@ -18,6 +19,7 @@
   icon: ./assets/images/tags/network.png
   featured: true
 
+# 言語・フレームワークなど
 - name: React
   color: "#007acc"
   icon: ./assets/images/tags/react.png
@@ -28,7 +30,12 @@
   icon: ./assets/images/tags/swift.png
   featured: false
 
+- name: Netlify
+  color: "#007acc"
+  icon: ./assets/images/tags/netlify.png
+  featured: false
+
 - name: その他
   color: "#007acc"
   icon: ./assets/images/logo.png
-  featured: true
+  featured: false
