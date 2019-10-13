@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `サクっとプログラミング`,
-    siteUrl: `https://saku-programing.com`,
+    siteUrl: `https://saku-program.com`,
     description: `ITに詳しくなれるメディア`,
     topics: [`dfkmfp`,`fdniofdoinf`],
     menu: [
