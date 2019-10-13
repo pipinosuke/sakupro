@@ -27,7 +27,7 @@ module.exports = {
     search: true,
     author: {
       name: `サクプロ`,
-      description: `プログラミング初心者に向けて、体系的なサイト作りを心がけて情報発信していくよ。<br>当サイト、あるいは僕に興味のある人は<a href="./about">このページ</a>を見て欲しいよ`,
+      description: `プログラミング初心者に向けて、体系的なサイト作りを心がけて情報発信していくよ。<br>当サイト、あるいは僕に興味のある人は<a href="./about">このページ</a>を見て欲しいよ。スポンサーや広告等のご依頼もお待ちしているよ`,
       social: {
         facebook: ``,
         twitter: ``,
