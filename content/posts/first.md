@@ -7,7 +7,7 @@ excerpt: >-
   最初の投稿です
 featuredImage: ../assets/thumbs/pawapuro.jpg
 tags:
-  - Demo
+  - その他
 ---
 
 最初の投稿です

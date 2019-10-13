@@ -9,7 +9,7 @@ excerpt: >-
   voluptua.
 featuredImage: ../assets/thumbs/cover.jpg
 tags:
-  - Demo
+  - その他
 ---
 
 ## Cruciabere instruit
