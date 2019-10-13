@@ -2,28 +2,32 @@ module.exports = {
   siteMetadata: {
     title: `サクっとプログラミング`,
     siteUrl: `https://saku-program.com`,
-    description: `ITに詳しくなれるメディア`,
-    topics: [`dfkmfp`,`fdniofdoinf`],
+    description: `サクッと気軽にITに詳しくなれるメディア`,
+    topics: [`プログラミング`],
     menu: [
       {
-        name: 'Home',
+        name: 'ホーム',
         path: '/'
       },
       {
-        name: 'About',
+        name: '当サイトとサクプロについて',
         path: '/about'
       },
     ],
     footerMenu: [
       {
-        name: 'About',
-        path: '/about'
+        name: 'プライバシーポリシー',
+        path: '/privacy-policy'
+      },
+      {
+        name: '免責事項',
+        path: '/law'
       },
     ],
     search: true,
     author: {
-      name: `nehalem`,
-      description: `サクプロです。`,
+      name: `サクプロ`,
+      description: `プログラミング初心者に向けて、体系的なサイト作りを心がけて情報発信していくよ。<br>当サイト、あるいは僕に興味のある人は<a href="./about">このページ</a>を見て欲しいよ`,
       social: {
         facebook: ``,
         twitter: ``,
