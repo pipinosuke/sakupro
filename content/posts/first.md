@@ -2,8 +2,10 @@
 title: このサイトを見るとわかること・見て欲しい人
 path: /first
 created: 2019-10-10T00:00:00.000Z
-excerpt: 主にこのサイトに初めて来てくれた人に向けて、このサイトでコンセプトや取り扱う内容を簡単に説明しているよ。よろしくね
-featuredImage: /../content/assets/thumbs/sample.jpg
+updated: 2019-10-10T00:00:00.000Z
+excerpt: >-
+  主にこのサイトに初めて来てくれた人に向けて、このサイトでコンセプトや取り扱う内容を簡単に説明しているよ。よろしくね
+featuredImage: ../assets/thumbs/pawapro.jpg
 tags:
   - お知らせ・その他
 ---

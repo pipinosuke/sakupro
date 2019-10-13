@@ -2,8 +2,10 @@ backend:
   name: git-gateway
   branch: master
 
+
 media_folder: content/assets/thumbs
-public_folder: static
+public_folder_relative: true
+public_folder: ../assets/thumbs
 
 collections:
   - name: "post"
