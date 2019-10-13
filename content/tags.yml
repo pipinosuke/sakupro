@@ -30,12 +30,38 @@
   icon: ./assets/images/tags/swift.png
   featured: false
 
+# プラットフォーム・サービス  
 - name: Netlify
   color: "#007acc"
   icon: ./assets/images/tags/netlify.png
   featured: false
 
-- name: その他
+- name: Heroku
+  color: "#007acc"
+  icon: ./assets/images/tags/heroku.png
+  featured: false
+
+- name: GoogleAppsScript
+  color: "#007acc"
+  icon: ./assets/images/tags/gas.png
+  featured: false
+
+- name: Line
+  color: "#007acc"
+  icon: ./assets/images/tags/line.png
+  featured: false
+
+- name: Twitter
+  color: "#007acc"
+  icon: ./assets/images/tags/twitter.png
+  featured: false
+
+- name: Slack
+  color: "#007acc"
+  icon: ./assets/images/tags/slack.png
+  featured: false
+
+- name: お知らせ・その他
   color: "#007acc"
   icon: ./assets/images/logo.png
   featured: false
