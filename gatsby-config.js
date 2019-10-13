@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `サクっとプログラミング`,
+    title: `サクプロ`,
     siteUrl: `https://saku-program.com`,
-    description: `サクッと気軽にITに詳しくなれるメディア`,
+    description: `サクっとプログラミングに詳しくなれるwebサイト`,
     topics: [`プログラミング`],
     menu: [
       {
@@ -27,10 +27,10 @@ module.exports = {
     search: true,
     author: {
       name: `サクプロ`,
-      description: `プログラミング初心者に向けて、体系的なサイト作りを心がけて情報発信していくよ。当サイト、あるいは僕に興味のある人は<a href="./about">このページ</a>を見て欲しいよ<br>スポンサーや広告等のご依頼もお待ちしているよ`,
+      description: `プログラミング初心者に向けて、体系的なサイト作りを心がけて情報発信していくよ<br>当サイト、あるいは僕に興味のある人は<a href="./about">このページ</a>を見て欲しいよ`,
       social: {
         facebook: ``,
-        twitter: ``,
+        twitter: `https://twitter.com/sakuprogram`,
         linkedin: ``,
         instagram: ``,
         youtube: ``,
