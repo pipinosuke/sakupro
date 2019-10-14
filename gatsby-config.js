@@ -38,9 +38,7 @@ module.exports = {
         twitch: ``
       }
     },
-    adsense: {
-      title: `vimfoiv`
-    },
+    googleAnalyticsID: `UA-84084422-10`,
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
@@ -57,6 +55,12 @@ module.exports = {
           icon: `${__dirname}/content/assets/images/logo.png`
         }
       }
-    }
+    },
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: this.googleAnalyticsID
+      }
+    },
   ]
 };
