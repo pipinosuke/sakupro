@@ -38,7 +38,6 @@ module.exports = {
         twitch: ``
       }
     },
-    googleAnalyticsID: `UA-84084422-10`,
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
@@ -59,7 +58,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: this.googleAnalyticsID
+        trackingId: "UA-84084422-10"
       }
     },
   ]
