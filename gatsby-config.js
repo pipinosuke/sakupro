@@ -50,7 +50,7 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         output: `/sitemap.xml`,
-        exclude: [`/page-2`,`/404`],
+        exclude: [`/404`],
       }
     },
     {
@@ -70,7 +70,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "UA-84084422-10"
+        trackingId: "UA-84084422-10",
+        head: true
       }
     },
   ]
