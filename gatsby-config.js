@@ -23,6 +23,10 @@ module.exports = {
         name: '免責事項',
         path: '/law'
       },
+      {
+        name: 'サイトマップ',
+        path: '/sitemap.xml'
+      }
     ],
     search: true,
     author: {
@@ -41,6 +45,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
+    'gatsby-plugin-google-analytics',
     {
       resolve: `@pipinosuke/gatsby-theme-nehalem`,
       options: {
