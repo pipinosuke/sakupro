@@ -47,6 +47,13 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     'gatsby-plugin-google-analytics',
     {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        exclude: [`/page-2`,`/404`],
+      }
+    },
+    {
       resolve: `@pipinosuke/gatsby-theme-nehalem`,
       options: {
         manifest: {
