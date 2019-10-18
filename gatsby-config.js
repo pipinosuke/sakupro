@@ -1,16 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: `サクプロ`,
+    title: `サクっとプログラミング`,
     siteUrl: `https://saku-program.com`,
-    description: `サクっとプログラミングに詳しくなれるwebサイト`,
-    topics: [`プログラミング`],
+    description: `web開発に必要なあれこれがまとまるwebサイト`,
+    topics: [`IT`,`プログラミング`,],
     menu: [
       {
         name: 'ホーム',
         path: '/'
       },
       {
-        name: '当サイトとサクプロについて',
+        name: '当サイトについて',
         path: '/about'
       },
     ],
