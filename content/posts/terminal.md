@@ -8,6 +8,7 @@ excerpt: >-
 featuredImage: ../assets/thumbs/Terminal.jpg
 tags:
   - 開発ツール
+  - 入門
   - terminal
 ---
 ## 「ターミナル」って？

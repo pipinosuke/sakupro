@@ -19,6 +19,11 @@
   icon: ./assets/images/tags/network.png
   featured: true
 
+- name: 入門
+  color: "#007acc"
+  icon: ./assets/images/tags/beginner.png
+  featured: true
+
 # 開発ツール
 - name: Git
   color: "#007acc"
