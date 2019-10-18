@@ -30,6 +30,11 @@
   icon: ./assets/images/tags/github.png
   featured: false
 
+- name: ターミナル
+  color: "#007acc"
+  icon: ./assets/images/tags/terminal.png
+  featured: false
+
 # 言語・フレームワークなど
 - name: React
   color: "#007acc"
