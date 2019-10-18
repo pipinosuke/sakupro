@@ -20,7 +20,7 @@
   featured: true
 
 - name: 入門
-  color: "#007acc"
+  color: "#00FF00"
   icon: ./assets/images/tags/beginner.png
   featured: true
 

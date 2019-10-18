@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `サクっとプログラミング`,
     siteUrl: `https://saku-program.com`,
-    description: `web開発に必要なあれこれがまとまるwebサイト`,
+    description: `開発のあれこれがまとまるwebサイト`,
     topics: [`IT`,`プログラミング`,],
     menu: [
       {
