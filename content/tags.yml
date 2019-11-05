@@ -1,15 +1,18 @@
 # ざっくりとしたジャンル分け
 - name: 開発環境構築
+  displayName: "dev-environment"
   color: "#007acc"
   icon: ./assets/images/tags/develop.png
   featured: true
 
 - name: 開発ツール
+  displayName: "tools"
   color: "#007acc"
   icon: ./assets/images/tags/tools.png
   featured: true
 
-- name: モバイル
+- name: "モバイル"
+  displayName: mobile
   color: "#007acc"
   icon: ./assets/images/tags/mobile.png
   featured: true
@@ -20,6 +23,7 @@
   featured: true
 
 - name: 入門
+  displayName: Beginner
   color: "#00FF00"
   icon: ./assets/images/tags/beginner.png
   featured: true
@@ -36,6 +40,7 @@
   featured: false
 
 - name: ターミナル
+  displayName: Terminal
   color: "#007acc"
   icon: ./assets/images/tags/terminal.png
   featured: false
@@ -88,6 +93,7 @@
 #   featured: false
 
 - name: お知らせ・その他
+  displayName: news
   color: "#007acc"
   icon: ./assets/images/logo.png
   featured: false
