@@ -11,24 +11,6 @@
   icon: ./assets/images/tags/tools.png
   featured: true
 
-- name: "モバイル"
-  slugableName: mobile
-  color: "#007acc"
-  icon: ./assets/images/tags/mobile.png
-  featured: true
-
-- name: WEB
-  color: "#007acc"
-  icon: ./assets/images/tags/network.png
-  featured: true
-
-- name: 入門
-  slugableName: Beginner
-  color: "#00FF00"
-  icon: ./assets/images/tags/beginner.png
-  featured: true
-
-# 開発ツール
 - name: Git
   color: "#007acc"
   icon: ./assets/images/tags/git.png
@@ -45,16 +27,36 @@
   icon: ./assets/images/tags/terminal.png
   featured: false
 
-# 言語・フレームワークなど
-- name: React
+##モバイル
+
+- name: モバイル
+  slugableName: mobile
   color: "#007acc"
-  icon: ./assets/images/tags/react.png
-  featured: false
+  icon: ./assets/images/tags/mobile.png
+  featured: true
 
 - name: Swift
   color: "#007acc"
   icon: ./assets/images/tags/swift.png
   featured: false
+
+##WEB
+- name: WEB
+  color: "#007acc"
+  icon: ./assets/images/tags/network.png
+  featured: true
+
+- name: React
+  color: "#007acc"
+  icon: ./assets/images/tags/react.png
+  featured: false
+
+
+- name: 入門
+  slugableName: Beginner
+  color: "#03FF30"
+  icon: ./assets/images/tags/beginner.png
+  featured: true
 
 # - name: Unity
 #   color: "#007acc"
@@ -94,6 +96,6 @@
 
 - name: お知らせ・その他
   slugableName: news
-  color: "#007acc"
+  color: "#3e3e3c"
   icon: ./assets/images/logo.png
   featured: false
