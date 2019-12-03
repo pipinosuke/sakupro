@@ -45,7 +45,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
-    'gatsby-plugin-google-analytics',
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
