@@ -19,13 +19,12 @@ collections:
       - {label: "説明", name: "excerpt", widget: "text"}
       - {label: "サムネイル", name: "featuredImage", widget: "image"}
       - {label: "記事", name: "body", widget: "markdown"}
-      - {label: "タグ", name: "tags", widget: "list"}
-      # - {label: "タグ", name: "tags", widget: "relation", collection: "categories" , multiple: true}
+      #- {label: "タグ", name: "tags", widget: "list"}
+      - {label: "タグ", name: "tags", widget: "relation", collection: "tagCollection" , multiple: true, searchFields: "title" ,valueField: "title" ,displayFields: "title" }
 
-  # - name: 'categories'
-  #   label: 'カテゴリ'
-  #   folder: 'categories'
-  #   create: true
-  #   fields:
-  #     - { label: 'カテゴリ名', name: 'title', widget: 'string' }
-  #     - { label: '説明文', name: 'body', widget: 'text' }
+  - name: 'tagCollection'
+    label: 'Tags'
+    folder: 'content/tags'
+    create: true
+    fields:
+      - { label: 'カテゴリ名', name: 'title', widget: 'string' }
