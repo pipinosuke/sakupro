@@ -1,25 +1,26 @@
 # ざっくりとしたジャンル分け
-- name: 開発環境構築
-  slugableName: "dev-environment"
-  color: "#007acc"
-  icon: ./assets/images/tags/develop.png
-  featured: true
+#この２つは「入門」に統合
+# - name: 開発環境構築
+#   slugableName: "dev-environment"
+#   color: "#007acc"
+#   icon: ./assets/images/tags/develop.png
+#   featured: true
 
-- name: 開発ツール
-  slugableName: "tools"
-  color: "#007acc"
-  icon: ./assets/images/tags/tools.png
-  featured: true
+# - name: 開発ツール
+#   slugableName: "tools"
+#   color: "#007acc"
+#   icon: ./assets/images/tags/tools.png
+#   featured: true
 
-- name: Git
-  color: "#007acc"
-  icon: ./assets/images/tags/git.png
-  featured: false
+# - name: Git
+#   color: "#007acc"
+#   icon: ./assets/images/tags/git.png
+#   featured: false
 
-- name: Github
-  color: "#007acc"
-  icon: ./assets/images/tags/github.png
-  featured: false
+# - name: Github
+#   color: "#007acc"
+#   icon: ./assets/images/tags/github.png
+#   featured: false
 
 - name: ターミナル
   slugableName: Terminal
@@ -29,39 +30,53 @@
 
 ##モバイル
 
-- name: モバイル
-  slugableName: mobile
-  color: "#007acc"
-  icon: ./assets/images/tags/mobile.png
-  featured: true
+# - name: モバイル
+#   slugableName: mobile
+#   color: "#007acc"
+#   icon: ./assets/images/tags/mobile.png
+#   featured: true
 
 - name: Swift
-  color: "#007acc"
+  color: "#FC5326"
   icon: ./assets/images/tags/swift.png
-  featured: false
-
-##WEB
-- name: WEB
-  color: "#007acc"
-  icon: ./assets/images/tags/network.png
   featured: true
 
-- name: React
-  color: "#007acc"
-  icon: ./assets/images/tags/react.png
-  featured: false
+#Xcodeのロゴでも使う
+# - name: UIKit
+#   color: "#FC5326"
+#   icon: ./assets/images/tags/swift.png
+#   featured: false
+
+
+##WEB
+# - name: WEB
+#   color: "#007acc"
+#   icon: ./assets/images/tags/network.png
+#   featured: true
+
+# - name: React
+#   color: "#007acc"
+#   icon: ./assets/images/tags/react.png
+#   featured: false
 
 
 - name: 入門
   slugableName: Beginner
-  color: "#03FF30"
+  color: "#14694F"
   icon: ./assets/images/tags/beginner.png
   featured: true
 
 # - name: Unity
-#   color: "#007acc"
+#   color: "#011F28"
 #   icon: ./assets/images/tags/unity.png
 #   featured: false
+
+# - name: C#
+#   slugableName: Csharp
+#   color: "#81249C"
+#   icon: ./assets/images/tags/c#.png
+#   featured: false
+
 
 # プラットフォーム・サービス  
 # - name: Netlify

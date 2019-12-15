@@ -7,7 +7,6 @@ excerpt: >-
   この記事ではMacで開発を行う際には必須の「ターミナル」についてとその使い方を解説するよ。
 featuredImage: ../assets/thumbs/Terminal.jpg
 tags:
-  - 開発ツール
   - 入門
   - ターミナル
 ---
