@@ -9,11 +9,12 @@ tags:
   - モバイル
   - Swift
 ---
-
 ### 前置き
-WebViewは数年前からdeprecated(非推奨)になっています。ですのでこちらは使用せず、代わりにWebKit及びWKWebViewを使いましょう
+元々はUIKitで提供されていた[WebView](https://developer.apple.com/documentation/uikit/uiwebview)ですが、数年程前からdeprecated(非推奨)になっています。ですのでこちらは使用せず、代わりに[WebKit](https://developer.apple.com/documentation/webkit)で提供されている[WKWebView](https://developer.apple.com/documentation/webkit/wkwebview)を使いましょう
 
 ## 手順
+早速使い方の手順を説明していきます。流れとしてはこうです。
+
 > 1. WebKitをインポートする
 > 2. WKWebViewをoutlet接続する
 > 3. WKWebViewでurlを開く
@@ -29,7 +30,7 @@ WebKitViewを扱いたいViewControllerのファイルに追記しておきま�
 
 ### 2. WKWebViewをoutlet接続する
 選ぶのは下です！！
-![Alt text](./webkitview.png)
+![Alt text](./webkitview.png)  
 最終的にこんな感じになるでしょう。
 ```swift
 import UIKit
@@ -44,7 +45,7 @@ class WebViewController: UIViewController {
 }
 ```
 
-## 3. WKWebViewでURLを開く
+### 3. WKWebViewでURLを開く
 `load()`というメソッドでURLを読み込むことができます。コードを見るとこう。
 ``` swift
 //apple公式ドキュメントより抜粋
@@ -75,8 +76,8 @@ private func openURL(_ string: String?) {
 }
 ```
 
-#### ・注 読み込むURLが「http://~」の場合
-下画像に設定が必要なので気を付けましょう。
+#### 注: 読み込むURLが「http://~」の場合に必要な設定手順
+http://~から始まるURLを開く場合、下画像のように設定が必要です！！気を付けましょう
 ![enter image description here](https://i.gyazo.com/0d4ddd0b648c1b7b149c2c6a1634ea7c.png)
 簡単な手順としてはまず`Info.plist`を開きまして、「App Transport Security Settings」→「Allow Arbitrary Loads」の値をYESとします。項目は＋ボタンで追加可能です。わからなければ下の記事を見るのがわかりやすいです。
 - [XcodeでiOSアプリのhttp通信を許可する方法](https://fukatsu.tech/permit-http-ios)

@@ -20,3 +20,12 @@ collections:
       - {label: "サムネイル", name: "featuredImage", widget: "image"}
       - {label: "記事", name: "body", widget: "markdown"}
       - {label: "タグ", name: "tags", widget: "list"}
+      # - {label: "タグ", name: "tags", widget: "relation", collection: "categories" , multiple: true}
+
+  # - name: 'categories'
+  #   label: 'カテゴリ'
+  #   folder: 'categories'
+  #   create: true
+  #   fields:
+  #     - { label: 'カテゴリ名', name: 'title', widget: 'string' }
+  #     - { label: '説明文', name: 'body', widget: 'text' }
