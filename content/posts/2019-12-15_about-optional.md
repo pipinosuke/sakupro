@@ -4,7 +4,7 @@ path: about-optional
 created: 2019-12-15T13:42:51.408Z
 updated: 2019-12-15T13:42:51.458Z
 excerpt: 主にアンラップについて解説
-featuredImage: /content/assets/thumbs/1_s4__g3knebuue6qhywibnq.png
+featuredImage: ../assets/thumbs/1_s4__g3knebuue6qhywibnq.png
 tags:
   - Swift
 ---
