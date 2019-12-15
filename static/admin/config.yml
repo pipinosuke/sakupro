@@ -12,10 +12,10 @@ collections:
     label: "Post"
     folder: "content/posts"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    path: "/{{slug}}"
     fields:
       - {label: "タイトル", name: "title", widget: "string"}
-      - {label: "ファイルパス→ 「/〜」という形で", name: "path", widget: "string"}
+      # - {label: "ファイルパス→ 「/〜」という形で", name: "path", widget: "string"}
       - {label: "公開日", name: "created", widget: "date"}
       - {label: "更新日", name: "updated", widget: "date"}
       - {label: "説明", name: "excerpt", widget: "text"}
