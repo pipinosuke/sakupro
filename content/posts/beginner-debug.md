@@ -4,7 +4,7 @@ path: beginner-debug
 created: 2019-11-02T00:00:00.000Z
 updated: 2019-12-02T00:00:00.000Z
 excerpt: 一見地味だけど開発効率・学習効率を高める上で非常に重要な「デバッグ」について簡単にまとめるよ。初心者の方には特に読んでほしいよ
-featuredImage: ../assets/thumbs/Terminal.jpg
+featuredImage: ../assets/thumbs/debug.jpg
 tags:
   - 入門
 ---

@@ -1,9 +1,10 @@
 ---
 title: アプリ内でWebページを開く、WebView(WKWebView)の使い方
+path: how-to-use-webview
 created: 2019-12-15T07:46:53.401Z
 updated: 2019-12-15T07:46:53.443Z
 excerpt: アプリ内でWebページを開きたい時に使う、WKWebViewについての解説をしているよ。ちなみにWebViewは非推奨になったから注意して欲しいよ。
-featuredImage: /../assets/thumbs/webkitview.png
+featuredImage: ../assets/thumbs/webkitview.png
 tags:
   - モバイル
   - Swift
