@@ -1,6 +1,6 @@
 ---
 title: Macで必須の「ターミナル」って何？その使い方は？
-path: /terminal
+path: terminal
 created: 2019-10-19T00:00:00.000Z
 updated: 2019-10-19T00:00:00.000Z
 excerpt: >-

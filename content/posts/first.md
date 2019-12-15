@@ -1,6 +1,6 @@
 ---
 title: このサイトを見るとわかること・見て欲しい人
-path: /first
+path: first
 created: 2019-10-10T00:00:00.000Z
 updated: 2019-10-10T00:00:00.000Z
 excerpt: >-

@@ -1,6 +1,6 @@
 ---
 title: デバッグを制するものは開発を制す
-path: /beginner-debug
+path: beginner-debug
 created: 2019-11-02T00:00:00.000Z
 updated: 2019-12-02T00:00:00.000Z
 excerpt: >- 
