@@ -4,7 +4,7 @@ path: carthage-cocoapods
 created: 2019-12-17T12:02:35.248Z
 updated: 2019-12-17T12:02:35.301Z
 excerpt: CarthageとCocoapodsがあるよ。それぞれの使い方、使い分けについて解説
-featuredImage: /content/assets/thumbs/xcode.jpg
+featuredImage: ../assets/thumbs/xcode.jpg
 tags:
   - iOSアプリ
 ---
