@@ -41,6 +41,12 @@
   icon: ./assets/images/tags/swift.png
   featured: true
 
+- name: iOSアプリ
+  slugableName: ios
+  color: "#3796DE"
+  icon: ./assets/images/tags/xcode.png
+  featured: true
+
 #Xcodeのロゴでも使う
 # - name: UIKit
 #   color: "#FC5326"
