@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `サクっとプログラミング`,
     siteUrl: `https://saku-program.com/`,
-    description: `開発のあれこれがまとまるwebサイト`,
-    topics: [`IT`,`プログラミング`,],
+    description: `iOSアプリ開発のあれこれがまとまるwebサイト`,
+    topics: [`iOSアプリ`,`Swift`,`UIKit`,`Xcode`,`プログラミング`],
     menu: [
       {
         name: 'ホーム',
