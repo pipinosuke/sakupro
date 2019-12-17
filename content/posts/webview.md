@@ -6,7 +6,7 @@ updated: 2019-12-15T07:46:53.443Z
 excerpt: アプリ内でWebページを開きたい時に使う、WKWebViewについての解説をしているよ。ちなみにWebViewは非推奨になったから注意して欲しいよ。
 featuredImage: ../assets/thumbs/webkitview.png
 tags:
-  - Swift
+  - iOSアプリ
 ---
 ### 前置き
 元々はUIKitで提供されていた[WebView](https://developer.apple.com/documentation/uikit/uiwebview)ですが、数年程前からdeprecated(非推奨)になっています。ですのでこちらは使用せず、代わりに[WebKit](https://developer.apple.com/documentation/webkit)で提供されている[WKWebView](https://developer.apple.com/documentation/webkit/wkwebview)を使いましょう
