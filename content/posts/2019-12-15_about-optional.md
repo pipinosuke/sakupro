@@ -9,80 +9,89 @@ featuredImage: ../assets/thumbs/1_s4__g3knebuue6qhywibnq.png
 tags:
   - Swift
 ---
+### 前置き
 そもそも`String`と宣言しますが、`String?`とすることでoptional型のStringとして宣言できます。
 
-```
+``` swift
 var string: String = "Stringだ"
 var optionalString: String? = "Optional型のStringだ"
 ```
 ここまでは良いでしょう。問題は「結局、optional型と非optional型は**何が違うの？**」ということではないでしょうか
 
-## 違いはnilを許容するか否か
+## 決定的な違いは「nilを許容するか否か」
 > - 非optionalはnilを許容しません
 > - optionalはnilを許容します
 
 ### 「nil」は中身が無である状態
-nilとは「そもそも値が入っていない状態のこと」を指します。本筋から逸れるためここでは詳しく解説しませんが、直感的に理解したい方のためにそこそこ有名な画像があるので紹介しておきます。
-> ![nil or not nil](https://image.itmedia.co.jp/nl/articles/1702/22/senegal_zeroandnull001.jpg)
+nilとは「そもそも値が入っていない状態のこと」を指します。本筋から逸れるためここでは詳しく解説しませんが、nilの状態について直感的に理解したい方のためにそこそこ有名な画像があるので紹介しておきます。
+> ![nil or not nil](https://image.itmedia.co.jp/nl/articles/1702/22/senegal_zeroandnull001.jpg)  
 > 左のトイレットペーパーが「0」。右がnil
 
-### つまりは初期値が必要ない
-nilについての説明を踏まえて、そもそも非optional型の変数や定数を定義するとき、このように必ず初期値が必要でした。
+### nilを許容すると、初期値も必要ない
+先ほどのnilの説明を踏まえて、そもそも非optional型の変数や定数を定義するとき下のように必ず初期値が必要でした。
 ``` swift
+var string: String = "ああああ"
 var string: String //エラー
-var string: String = "ああああ" //OK
 ```
 それに対してoptionalはnilを扱うことができます。したがって初期値は必要ありません。
 ``` swift
-var optionalString: String? //OK
-var optionalString: String? = "ああああ" //OK
+var optionalString: String? = "ああああ"
+var optionalString: String?
 ```
-
+### さらに詳しくみてみる
+今度はOptionalと非Optional両方の値をprintしてみます。
 ``` swift
-print(string) //"ああああ"
-print(optinalString) //"Optional(ああああ)"
-```
+var string: String = "ああああ"
+print(string) //実行結果: "ああああ"
 
-ややこしく感じるところです。optional型を通常の型と同様に扱うためには**アンラップ**(unwrapp)をする必要があるというところがポイントです。
+var optionalString: String? = "ああああ"
+print(optinalString) //実行結果: "Optional(ああああ)"
+```
+実行結果が異なることがわかります。さらに
+``` swift
+var string: String = "ああああ"
+var optionalString: String? = "ああああ"
+string = optionalString //エラー
+```
+Optional型を通常の型と同様に扱うためには**アンラップ**(unwrapp)をする必要があるというところがポイントであると同時に、ややこしく感じてしまうところです。
 
 ### optionalから普通の型への変換(アンラップ)
 では`String?`→`String`への変換はどのように行うと良いでしょうか？
 
 ## アンラップ(unwrapp)の仕方
-### 1.  `!`(強制アンラップ/無条件アンラップ)
-`Unconditional Unwrapping`
+### 1.  `!`(強制アンラップ)
+シンプルかつわかりやすい方法がこの方法です。アンラップする対象の末尾に`!`を付けるとアンラップができます。ちなみに英名では「Unconditional Unwrapping(無条件アンラップ)」と言います。
 ``` swift
-
+var optionalStr: String? = "ああ"
+print(otionalStr!) //実行結果: "ああ"
 ```
-重大な欠点があります。**値がnilの場合もアンラップしてしまう**ことです。エラーとなってしまいます。事前にnilであるかどうかをチェックする必要があります。
+一見簡単で使いやすそうに見えますが、この強制アンラップには重大な欠点があります。それは**optionalの値がnilの場合もアンラップし、エラーを起こしてしまう**ことです。Optionalでしか扱えないnilを強制的に通常の型へと変換しようとするわけですから、当然エラーとなるわけです。これを防ぐためにはアンラップする前にnilであるかどうかをチェックする必要があります。
 ``` swift
 if optinalString != nil {
-   print(optinalString!)
+   print(optinalString!) //安心してアンラップできる
 }
 ```
-こうすることでnilであるかどうかを事前にif文でチェックしているわけですから、`print(optinalString!)`はエラーにはなり得なず、安心して使えるわけです。
+このようにnilであるかどうかをアンラップする前にif文でチェックすることで、`print(optinalString!)`はエラーにはなり得なず、安心して使えるわけです。一概に「強制アンラップは危険！！」と考えるのではなくこのような捉え方をするとうまく扱うことができそうです。
 
 > 「ここでエラーが出るはずはない」というのをちゃんと検討した上で正しく使う ! は、危険信号ではなくて、前提条件を表す強い意思表示になる  
 > 引用: [Swiftの `!` は危険信号か？](https://qiita.com/hironytic/items/0ca33b2c0415cdd38aff)
 
-一概に「強制アンラップは危険！！」と考えるのではなくこのような捉え方をするとうまく扱うことができそうです。
-
 ### 2. `if let`構文
-1の強制アンラップの説明で触れた事前のnillチェックをスマートに行うことができます。「Optional Binding」と呼ばれます。
+Swiftには先ほどの強制アンラップの説明で触れた事前のnillチェックをスマートに行うことができる構文が用意されています。それが`If let`構文です。
 ``` swift
 var optional: String? = "オプショナル"
 
 if let unwrapped = optional {
-    print(unwrapped) //実行結果:"オプショナル"
+    print(unwrapped) //実行結果: "オプショナル"
 }
 print(optional) //実行結果: Optional("オプショナル")
-print(unwrapped) //ifのスコープ外なのでエラー
+print(unwrapped) //ifのスコープ外なのでundefinedエラー
 ```
-
-上記のコードを例にとると変数`optional`の値がnilでない場合、その値をString型の定数`unwrapped`として扱うことができます。これは`if let`のスコープ内でのみ適応されます。  使う機会は多くないですが`if let`に対して、変数バージョンの`if var`もあります。
+上記のコードを例にとると変数`optional`の値がnilでない場合、その値をString型の定数`unwrapped`として扱うことができます。これは`if let`のスコープ内でのみ適応されます。  スコープ内でのみoptionalをアンラップして扱えることから、この構文は「Optional Binding(オプショナル拘束)」とも呼ばれます。
+また使う機会は多くないですが`if let`に対して、変数バージョンの`if var`もあります。
 
 ### 3. `guard let`構文
-これも`if let`構文と同じ「Optional Binding」と呼ばれるものです。`guard let`構文はメソッドの中でのみ使用できます。メソッドの中で早期リターンしたい場合は積極的に使うと良いでしょう。
+これも`if let`構文と同じ「Optional Binding」と呼ばれるものです。`guard let`構文はメソッドの中でき、のみ使用できます。メソッドの中で早期リターンしたい場合は積極的に使うと良いでしょう。
 ``` swift
 var optionalNil = Optional(nil)
 var notNil = Optional(5)
@@ -99,23 +108,43 @@ print(check(notNil))  //実行結果: nilじゃないよ
 ```
 
 ## 補足 そのほかのアンラップ
-### 頻出 OptionalChaining
-よく見ると思います。
+### 頻出 Optional Chaining
+よく見ると思います。ちなみに「Chainning」を直訳すると「連鎖」と言う意味になります。メソッドは呼び出されず、nilが返されます。
 ``` swift
-
+var optionalString: String? = "ああああ"
+print(optionalString?.count) //実行結果: "Optional(4)"
 ```
+
 ### ?? Nil Coalescing
-紛らわしいものに`??`があります。
+`??`はSwiftで用意されている演算子の１つで、アンラップに使います。
 ``` swift
-
+let hoge = (A ?? B)
 ```
+上記のコードでは、まずAがnilであるかを評価し、次のような処理を行います。
+- `A`がnilでない時、hogeの値は`A`
+- `A`がnilの時、hogeの値は`B`
+
+具体的な例として次のようなメソッドを考えてみましょう。
+``` swift
+func check(value : String?) {
+    print(value ?? "いや、nilやん。")
+}
+```
+`(value ?? "いや、nilやん。")`をprintしているところに注目です。こうなります。
+``` swift
+check(value: Optional("aaa")) //実行結果: "aaaa"
+check(value: nil) //実行結果: "いや、nilやん。"
+```
+
 
 
 ## まとめ
-> - `アンラップ`と言い、
-> - nilをアンラップにするとエラーが起きる。事前にnilをチェックすることで安全にアンラップできる。
-> -  
+> - optional型を通常の型に変換することを`アンラップ`と言う
+> - nilをアンラップするとエラーが起きる。事前にnilをチェックすることでこれを回避し、安全にアンラップできる。
+> -  安全なアンラップは「Optoinal Binding」等、Swiftの構文として数種類用意されているので状況に応じてうまく使い分けて活用する
 
-- [参考リンク](https://ut3.me/programming/swift-unwrap#toc3)
-またoptionalのアンラップがわかればiOSアプリ開発の基本、[コードで行う画面遷移](#)についての理解もしやすいはずです。
+### 最後に
+optionalのアンラップがわかればiOSアプリ開発の基本、[コードで行う画面遷移](#)についての理解もしやすいはずです。  
+また、Optionalについてさらに極めたい人は下の記事が参考になるでしょう。
+- [SwiftのOptional型を極める](https://qiita.com/koher/items/c6f446bad54442a28bf4)
 
