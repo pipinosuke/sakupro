@@ -4,6 +4,7 @@ backend:
 
 publish_mode: editorial_workflow
 media_folder: content/assets/thumbs
+media_folder_relative: true
 
 collections:
   - name: "post"
