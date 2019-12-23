@@ -62,7 +62,9 @@ let viewController = storyboard.instantiateInitialViewController() as! NextViewC
 
 ### 手順3. 遷移のコードを記述する
 
-いよいよ遷移するよ。遷移の方法には冒頭で紹介した次の2パターンがあるよ。それぞれ解説するよ A. `NavigationController`のメソッド(`push`)で遷移\
+いよいよ遷移するよ。遷移の方法には冒頭で紹介した次の2パターンがあるよ。それぞれ解説するよ 
+
+A. `NavigationController`のメソッド(`push`)で遷移\
 B. ViewControllerのメソッド(`present`)で遷移
 
 #### 3-A `NavigationController`のメソッドで遷移する方法
