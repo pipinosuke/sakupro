@@ -9,7 +9,6 @@ tags:
   - 入門
   - ターミナル
 ---
-## ターミナルを最低限使えるようになろう
 ### 「ターミナル」でできること
 みんなんはファイルを移動したりコピーしたりする時、Macであれば「Finder」,Windowsであれば「FileExplorer」を使ったことがあると思うよ。  
 それに対してターミナルでは黒い画面上に様々なコマンドを打ち込むことで、それと同様の操作を行うことができるよ。その他にもアプリケーションをインストールしたり様々な処理を行うことができるるよ。
@@ -24,21 +23,21 @@ tags:
 Mac標準搭載されている「Terminal」アプリでも良いんだけど、その代わりに「**iTerm2**」というアプリを使うことを猛烈にオススメするよ。見た目の良さや補完機能が備わっていたりと標準搭載のターミナルの上位互換と言っても良いよ。iTerm2は下のリンクからダウンロードできるよ。
 - [iTerm2 - macOS Terminal Replacement](https://iterm2.com/)
 
-###  mkdir: ディレクトリの作成
-由来は「make directory」。
+### pwd: 現在地の確認
 ``` bash
-mkdir newdirectory
-```
-
-### touch: ファイルの作成
-``` bash
-touch newfile
+pwd
 ```
 
 ### ls: フォルダ・ファイルを一覧表示
 由来は「list」。
 ``` bash
 ls
+```
+
+###  mkdir: ディレクトリの作成
+由来は「make directory」。
+``` bash
+mkdir directory
 ```
 
 ### cd: 参照するディレクトリを移動
@@ -53,14 +52,35 @@ cd ../
 pwd
 ```
 
+### touch: ファイルの作成
+``` bash
+touch newfile
+ls
+```
+
 ### rm: ファイル・ディレクトリの消去
 ファイルを消去するコマンドだよ。由来は「remove(消去する)」。ディレクトリとその中身ごと消去したい時は`-r`が必要だよ。
 ``` bash
-rm file
+rm newfile
 rm -r directory
 ```
 
 ## ターミナルでこれだけはやっておこう！
-ターミナルの使い方がわかったところでツールをインストールしておこう。必ず使うよ。
-- homebrewのインストールと使い方
-- carthageのインストールと使い方
+ターミナルの使い方がわかったところでCUIツールをインストールしておこう。必ず使うよ。
+### homebrewのインストール
+``` bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+homebrewについての詳細はこちらです。[homebrewのインストールと使い方](#)
+### XCode CommandLineTool
+``` bash
+xcode-select install
+```
+### Carthageのインストール
+
+``` bash
+brew install carthage
+```
+- [carthageのインストールと使い方](#)
+### Git
+- [gitの使い方](#)
