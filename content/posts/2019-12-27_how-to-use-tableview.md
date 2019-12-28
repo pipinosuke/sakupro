@@ -42,9 +42,11 @@ Storyboard上の右メニューを開いて「Custom Class」→「Class」か�
 ![relate](https://i.gyazo.com/96b1dc445ec9d0856d03a9ee2239e599.png)
 
 #### UITableViewのOutlet接続
-関連付けを行ったらStoryboard上に配置したTableViewのOutlet接続を行うよ。`control`を押しながらドラッグアンドドロップして設定するやつだよ
-![outlet](https://i.gyazo.com/407cd21a778e5c612d8ce6d9fd8e34b4.png)
-今回は`tableView`という変数として接続しているよ
+関連付けを行ったらStoryboard上に配置したTableViewのOutlet接続を行うよ。`control`を押しながらドラッグアンドドロップして設定するやつだよ  
+
+![outlet](https://i.gyazo.com/407cd21a778e5c612d8ce6d9fd8e34b4.png)  
+
+「Name」の欄には定義したい変数名を入力するよ。今回は`tableView`という変数として接続しているよ。
 
 ``` swift
 class MainViewController: UIViewController {
