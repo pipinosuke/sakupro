@@ -11,7 +11,7 @@ tags:
 ---
 ### 前置き
 
-そもそも`String`と宣言しますが、`String?`とすることでoptional型のStringとして宣言できます。
+今回は文字列を扱うString型を例に考えてみます。String型を定義する時は`String`と宣言します。それに対して、OptionalのString型を定義したい時は`String?`とすることで宣言できます。
 
 ```swift
 var string: String = "Stringだ"
@@ -32,16 +32,16 @@ nilとは「そもそも値が入っていない状態のこと」を指しま�
 > ![nil or not nil](https://image.itmedia.co.jp/nl/articles/1702/22/senegal_zeroandnull001.jpg)\
 > 左のトイレットペーパーが「0」。右がnil
 
-### nilを許容すると、初期値も必要ない
+### Optionalは初期値が要らない
 
-先ほどのnilの説明を踏まえて、そもそも非optional型の変数や定数を定義するとき下のように必ず初期値が必要でした。
+先ほどのnilの説明を踏まえて、そもそも非optional型の変数や定数を定義するとき下のように必ず初期値が必要でした。なぜなら初期値がなくては定義した段階で値がnilになってしまうからです
 
 ```swift
 var string: String = "ああああ"
 var string: String //エラー
 ```
 
-それに対してoptionalはnilを扱うことができます。したがって初期値は必要ありません。
+それに対してoptionalはnilを許容するので、初期値は必要ありません。
 
 ```swift
 var optionalString: String? = "ああああ"
@@ -50,7 +50,7 @@ var optionalString: String?
 
 ### さらに詳しくみてみる
 
-今度はOptionalと非Optional両方の値をprintしてみます。
+さらにOptionalと非Optional両方の値をprintしてみます。
 
 ```swift
 var string: String = "ああああ"
@@ -75,10 +75,16 @@ Optional型を通常の型と同様に扱うためには**アンラップ**(unwr
 では`String?`→`String`への変換はどのように行うと良いでしょうか？
 
 ## アンラップ(unwrapp)の仕方
+よく使うのは次の3つです
+
+> - !(強制アンラップ)
+> - Optinoal Binding(オプショナル拘束)
+>    - if let構文
+>    - guard let構文
 
 ### 1.  `!`(強制アンラップ)
 
-シンプルかつわかりやすい方法がこの方法です。アンラップする対象の末尾に`!`を付けるとアンラップができます。ちなみに英名では「Unconditional Unwrapping(無条件アンラップ)」と言います。
+シンプルかつわかりやすい方法がこの方法です。アンラップする対象の末尾に`!`を付けるとアンラップができます。どうでもいいですが英名では「Unconditional Unwrapping(無条件アンラップ)」と言います
 
 ```swift
 var optionalStr: String? = "ああ"
@@ -175,7 +181,7 @@ check(value: nil) //実行結果: "いや、nilやん。"
 ## まとめ
 
 > * optional型を通常の型に変換することを`アンラップ`と言う
-> * nilをアンラップするとエラーが起きる。事前にnilをチェックすることでこれを回避し、安全にアンラップできる。
+> * nilをアンラップするとエラーが起きる。事前にnilをチェックすることでこれを回避し、安全にアンラップができる。
 > * 安全なアンラップは「Optoinal Binding」等、Swiftの構文として数種類用意されているので状況に応じてうまく使い分けて活用する
 
 ### 最後に
