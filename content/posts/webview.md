@@ -28,8 +28,8 @@ import WebKit
 WebKitViewを扱いたいViewControllerのファイルに追記しておきましょう。
 
 ### 2. WKWebViewをoutlet接続する
-選ぶのは下です！！
-![Alt text](./webkitview.png)  
+選ぶのは下です！！deprecatedの方を選ばないように・・・！！
+![select wkwebview](https://i.gyazo.com/ee9819205dc3e0f429c573628b97064c.jpghttps://i.gyazo.com/ee9819205dc3e0f429c573628b97064c.jpg)  
 最終的にこんな感じになるでしょう。
 ```swift
 import UIKit
