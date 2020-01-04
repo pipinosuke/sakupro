@@ -64,7 +64,8 @@ module.exports = {
           display: `minimal-ui`,
           icon: `${__dirname}/content/assets/images/logo.png`
         }
-      }
+      },
+      postsPerPage: 8
     },
     {
       resolve: "gatsby-plugin-google-analytics",

@@ -2,7 +2,7 @@
 title: Swiftのoptinalについて。アンラップの仕方や他の型との違いを解説
 path: about-optional
 created: 2019-12-15T13:42:51.408Z
-updated: 2019-12-15T13:42:51.458Z
+updated: 2019-12-30T13:42:51.458Z
 excerpt: >-
   SwiftにおけるOptional型と非Optional型との違いやアンラップの仕方について解説しているよ。Optionalはアプリ開発においても使うことになるから是非抑えて欲しいよ
 featuredImage: ../assets/thumbs/1_s4__g3knebuue6qhywibnq.png
