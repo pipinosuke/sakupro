@@ -12,9 +12,19 @@ tags:
 ### 画面遷移の際に呼び出すメソッド
 画面遷移したいときは次の2つのメソッドの内、どちらかを呼び出す必要があるよ。
 - [pushViewController](https://developer.apple.com/documentation/uikit/uinavigationcontroller/1621887-pushviewcontroller?language=swift)
+``` swift
+func pushViewController(_ viewController: UIViewController, 
+               animated: Bool)
+```
 - [present](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621380-present)
+``` swift
+func present(_ viewControllerToPresent: UIViewController, 
+    animated flag: Bool, 
+  completion: (() -> Void)? = nil)
+```
 
-ただしこれらメソッドを呼び出す前に、**遷移先のViewControllerのインスタンス化**という作業が必要になるよ。(後述)つまり大まかな流れとしてはこうなるよ
+二つのメソッドのコードを見ると両者どちらのメソッドも遷移先のUIViewControllerを引数に取ることがわかると思うよ。つまりこれらメソッドを呼び出す前に、**遷移先のViewControllerのインスタンス化**という作業が必要になるよ。(後述)つまり大まかな流れとしてはこうなるよ
+
 
 > 1. 遷移先のStoryboardを取得する
 > 2. 取得したStoryboardから、ViewControllerをインスタンス化する
