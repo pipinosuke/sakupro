@@ -1,5 +1,5 @@
 ---
-title: 【CarthageとCocoadpods】 2種類のライブラリ管理ツールとその使い分けについて解説
+title: 【CarthageとCocoapods】 2種類のライブラリ管理ツールとその使い分けについて解説
 path: carthage-cocoapods
 created: 2019-12-27T12:57:21.342Z
 updated: 2020-01-04T12:57:21.364Z
