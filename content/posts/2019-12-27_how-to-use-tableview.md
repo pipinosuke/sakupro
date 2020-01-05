@@ -43,12 +43,12 @@ tags:
 > - StoryboardとViewControllerの関連付け
 > - TableViewのOutlet接続
 
-#### StoryboardとViewControllerの関連付け
+#### ・StoryboardとViewControllerの関連付け
 まずはStoryboard常に表示されているViewControllerとコード上のViewControllerの関連付けを行うよ。 
 Storyboard上の右メニューを開いて「Custom Class」→「Class」から設定できるよ。下画像のように「Inherit Module from Target」にチェックマークが付いていれば正しく設定できているはずだよ。正しく関連付けがされていないと次に説明するOutlet接続もうまくいかないから注意。
 ![relate](https://i.gyazo.com/96b1dc445ec9d0856d03a9ee2239e599.png)
 
-#### UITableViewのOutlet接続
+#### ・UITableViewのOutlet接続
 関連付けを行ったらStoryboard上に配置したTableViewのOutlet接続を行うよ。`control`を押しながらドラッグアンドドロップして設定するやつだよ
 ![outlet](https://i.gyazo.com/407cd21a778e5c612d8ce6d9fd8e34b4.png)
 今回は`tableView`という変数として接続しているよ
@@ -129,7 +129,7 @@ TableViewを右クリック(二本指クリック)し、delegateとdataSourceの
 ![delegate/dataSource](https://i.gyazo.com/3baff4cdbca9ccbe18fcbbd93b7a7379.png)
 
 #### ・コードでdelegate・dataSourceの設定する方法
-下のように`tableView.delegate = self`、`tableView.datasource = self`と記述すると良いよ。ちなみにこの場合の「self」は「MainViewController」を指すよ
+下のように`tableView.delegate = self`、`tableView.datasource = self`と記述すると良いよ。ちなみにこの場合の`self`は`MainViewController`を指しているよ
 ``` swift
 class MainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
