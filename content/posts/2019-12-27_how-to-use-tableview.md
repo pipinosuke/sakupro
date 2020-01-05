@@ -2,7 +2,7 @@
 title: delegateを用いてTableViewをUIViewControllerで実装する方法を解説
 path: how-to-use-tableview
 created: 2019-12-27T14:14:17.247Z
-updated: 2019-12-27T14:14:17.261Z
+updated: 2019-01-05T14:14:17.261Z
 excerpt: アプリ開発においてもはやなくてはならないTableViewだけど、そのTableViewをUIViewController上に実装する方法を解説しているよ。
 featuredImage: ../assets/thumbs/xcode.jpg
 tags:
@@ -27,8 +27,15 @@ tags:
 このリストに沿って手順を説明していくよ。
 
 ### 下準備
-まずは新しいプロジェクトを作って`MainViewController`と`Main.storyboard`の二つのファイルを作成。Main.storyboardにUIViewControllerを配置して、上にTableViewを貼り付けておこう。あと「Is Initial ViewController」にチェックマークを入れることも忘れないように・・・！！
-![enter image description here](https://i.gyazo.com/29f6c37ee30075ed37603ed8e4208e98.png)
+- 新しいプロジェクトを作成
+- `MainViewController`と`Main.storyboard`の二つのファイルを作成
+- Main.storyboardにUIViewControllerを配置して、さらにその上にTableViewを貼り付ける
+- 「Is Initial ViewController」にチェックマークを入れる(チェックマークが入ると下画像の「→」マークが表示される)
+
+![initial tableview sample](https://i.gyazo.com/29f6c37ee30075ed37603ed8e4208e98.png)
+
+- 「Targets」→「Deployment Info」→「Main Interface」を`Main`に設定
+![Main Interface Setting](https://i.gyazo.com/2ce18e7c8f00c44dc84e51485387ca59.png)
 
 
 ### 手順1. 関連付けとOutlet接続
@@ -42,11 +49,9 @@ Storyboard上の右メニューを開いて「Custom Class」→「Class」か�
 ![relate](https://i.gyazo.com/96b1dc445ec9d0856d03a9ee2239e599.png)
 
 #### UITableViewのOutlet接続
-関連付けを行ったらStoryboard上に配置したTableViewのOutlet接続を行うよ。`control`を押しながらドラッグアンドドロップして設定するやつだよ  
-
-![outlet](https://i.gyazo.com/407cd21a778e5c612d8ce6d9fd8e34b4.png)  
-
-「Name」の欄には定義したい変数名を入力するよ。今回は`tableView`という変数として接続しているよ。
+関連付けを行ったらStoryboard上に配置したTableViewのOutlet接続を行うよ。`control`を押しながらドラッグアンドドロップして設定するやつだよ
+![outlet](https://i.gyazo.com/407cd21a778e5c612d8ce6d9fd8e34b4.png)
+今回は`tableView`という変数として接続しているよ
 
 ``` swift
 class MainViewController: UIViewController {
@@ -73,14 +78,14 @@ Exntensionを使うことでUIViewControllerを`UITableViewDataSource`・`UITabl
 ### 手順3. Delegateメソッドの実装
 手順2でUIViewControllerをUITableViewDelegate準拠させたことによって、UIViewControllerにDelegateメソッドが実装できるようになったよ。
 
-[UITableViewのデリゲートメソッドまとめ](https://qiita.com/kagemiku/items/22b74010365723c5c4fe)を眺めると様々なDelegateメソッドが用意されていることがわかるけど、実はあまり使わないものも多いよ。その中でも下の二つを定義するメソッドは必ず必要になるよ。逆を言えばこの二つさえ実装できればTableViewは実装できることになるよ。
+[UITableViewのデリゲートメソッドまとめ](https://qiita.com/kagemiku/items/22b74010365723c5c4fe)を眺めると様々なDelegateメソッドが用意されていることがわかるけど、その中でも下の二つを定義するメソッドは必ず必要になるよ。逆を言えば最低限この二つのメソッドさえ実装できれとりあえずTableViewは実装できることになるよ
 
-> - 行数
-> - セルの中身
+> - 行数を定義する`numberOfRows`
+> - セルの中身を定義する`cellForRowAt`
 
-次に上に挙げた二つの項目をどのメソッドで、どのように定義するのかを説明していくよ。
+上の二つについてどのように実装するかを順次解説していくよ
 
-#### `numberOfRows`で行の数を定義する
+#### ・`numberOfRows`で行の数を定義する
 このメソッドについて[Appleの公式ドキュメント](https://developer.apple.com/documentation/uikit/uitableview/1614952-numberofrows)
 から実装を見ると、`section`という引数を取り返り値型は`Int`となっているよ。考えてみると`numberOfRowsは`行「数」を定義するのだから、返り値がInt型になるのは当たり前のことだよね
 ``` swift
@@ -93,7 +98,7 @@ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> 
     }
 ```
 
-#### `cellForRowAtIndexPath`でCellの中身を定義する
+#### ・`cellForRowAt`でCellの中身を定義する
 このメソッドについて[Appleの公式ドキュメント](https://developer.apple.com/documentation/uikit/uitableviewdatasource/1614861-tableview)から詳しい実装を見てみるとindexPathという引数をとって、返り値型は`UITableViewCell`となっていることがわかるよ
 ```swift
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -108,18 +113,23 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 
 今回はUIKitであらかじめ用意されているCellクラスを使っているが、自前で用意したカスタムCellを使うことが圧倒的に多いよ。カスタムCellを使ったTableViewの実装はまた別の記事で説明するつもりだよ。
 
-###  Delegateの設定
-再確認するけどここまで本来UITableView Contoller実装を行うUITableViewをUIViewControllerで実装してきたよ。最後にdelegateの設定を行うよ。
+###  手順4. Delegateの設定
+再確認するけどここまで本来的にはUITableViewControllerで実装を行うはずのUITableViewをUIViewControllerで実装してきたよ。UITableViewControllerの実装をUIViewControllerにdelegate(移譲)したことを示す必要があるよ。
+この設定を行うとDelegateメソッドで行った実装がしっかりと反映されて描画されるよ。delegateの設定を行う方法は次の二種類あるよ。
 
-[Delegateとその必要性について解説](#)しているのでまずこちらを見て欲しいよ。
+> - コードで設定する方法
+> - Storyboardで設定する方法
 
-#### delegate・dataSourceの設定
-続いてTableViewを右クリック(二本指クリック)し、delegateとdataSourceの設定を行うよ。画像のように「Outlets」の項目内の「dataSource」と「delegate」がMainViewControllerに紐付いていれば正しく設定できているよ。
+どちらのやり方でも問題ないのだけどViewControllerの記述はなるべく減らすのがベターなので、自分としてはコードではなくStoryboardから設定する方法を推奨するよ  
+また、「Delegateってなんだ？？」という方も少なからずいると思うからその方は[Delegateとその必要性について解説](#)を読んでもらえるとわかってもらえると思うよ。ではそれぞれのやり方を順次解説するよ
+
+#### ・Storyboradでdelegate・dataSourceの設定をする方法
+TableViewを右クリック(二本指クリック)し、delegateとdataSourceの設定を行うよ。画像のように「Outlets」の項目内の「dataSource」と「delegate」がMainViewControllerに紐付いていれば正しく設定できているよ
 
 ![delegate/dataSource](https://i.gyazo.com/3baff4cdbca9ccbe18fcbbd93b7a7379.png)
 
-ちなみにコードで設定する方法でも構わないが、ViewControllerへの記述はなるべく減らすのがベターなので、自分としてはStoryboardから設定する方法を推奨するよ
-
+#### ・コードでdelegate・dataSourceの設定する方法
+下のように`tableView.delegate = self`、`tableView.datasource = self`と記述すると良いよ。ちなみにこの場合の「self」は「MainViewController」を指すよ
 ``` swift
 class MainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
@@ -132,10 +142,9 @@ class MainViewController: UIViewController {
 }
 ```
 
-
 ## まとめ
 > - delegateの設定を行い、delegateメソッドを実装することでUIViewController上にTableViewを実装できる
 > - `extension`を用いてUIViewControllerを `UITableViewDelegate` と`UITableViewDateSource`の二つのプロトコルに準拠させることで、TableViewのDelegateメソッドを実装することができる
 > - TableViewを実装するにあたって最低限実装が必要なDelegateメソッドは次の二つある
 >   - セルの個数(行数)を定義する`NumberOfRows`
->   -  Cellの中身を定義する`CellForRowAtIndexPath`delegateを用いてTableViewをUIViewControllerで実装する方法を解説
+>   -  Cellの中身を定義する`CellForRowAtIndexPath`
