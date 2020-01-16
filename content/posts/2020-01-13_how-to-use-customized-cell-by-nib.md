@@ -122,7 +122,7 @@ func dequeueReusableCell(withIdentifier identifier: String) -> UITableViewCell?
 定義する際に`as`でセルクラスにキャストしておかないと、ViewController側から`xib`上で設置・outlet接続を行ったプロパティ(上記の例で言うと`cell.mainLabel`)にアクセスできない。
 
 ## まとめ
-> - カスタムセルを定義する際に生成する「Nibファイル」として定義する
+> - カスタムセルを定義する際には「Nibファイル」を用いる。これは**使い回しが可能**なセルである。
 > - カスタムセルを描画するためには以下2つのメソッドが必要。両者とも`ReuseIdentifier`の値を引数に取るので、Storyboardから忘れずに設定しておこう
 >   - セルを登録する`register`(`viewDidLoad()`内に記述)
 >   - カスタムセルクラスを定義する`dequeueReusableCell`(TableViewの場合は`cellForRowAt`・CollectionViewの場合は`cellForItemAt`に記述)
