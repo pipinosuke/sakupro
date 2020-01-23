@@ -2,7 +2,7 @@
 title: コードで行う画面遷移
 path: ios-transition
 created: 2019-12-17T11:06:33.664Z
-updated: 2019-01-04T11:06:33.694Z
+updated: 2019-01-22T11:06:33.694Z
 excerpt: ここではコードで行う画面遷移の方法を解説しているよ。セグエを使った遷移よりもコードの遷移を使いこなせるようになると、複雑なアプリも作りやすいよ
 featuredImage: ../assets/thumbs/thumb_transition_ios.jpeg
 tags:
@@ -25,7 +25,6 @@ func present(_ viewControllerToPresent: UIViewController,
 
 二つのメソッドのコードを見ると両者どちらのメソッドも遷移先のUIViewControllerを引数に取ることがわかると思うよ。つまりこれらメソッドを呼び出す前に、**遷移先のViewControllerのインスタンス化**という作業が必要になるよ。(後述)つまり大まかな流れとしてはこうなるよ
 
-
 > 1. 遷移先のStoryboardを取得する
 > 2. 取得したStoryboardから、ViewControllerをインスタンス化する
 > 3. 遷移のメソッドを実行する
@@ -40,10 +39,10 @@ func present(_ viewControllerToPresent: UIViewController,
 let storyboard = UIStoryboard(name: "Next",bundle: nil)
 ```
 
-### 手順2. 取得したstoryboardから遷移先のViewControllerをインスタンス化する
+### 手順2. `instantiateInitialViewController`メソッドで遷移先のViewControllerをインスタンス化する
 次に手順1で取得したstoryboardからViewControllerをインスタンス化しよう。`instantiateInitialViewController`というメソッドを用いるよ。
 
-#### ・遷移先のViewControllerにEntry Pointをつける
+#### ・ 遷移先のViewControllerにEntry Pointをつける
 StoryboardのViewControllerを選択し、右メニューの「Is Initial ViewController」にチェックマークをつけよう。下の画像のように「→」マークが確認できればおk。
 ![enter image description here](https://i.gyazo.com/a60ac3b2ba5d011e59825e0a433f5d29.png)
 
@@ -63,10 +62,11 @@ let viewController = storyboard.instantiateInitialViewController() as! NextViewC
  
 ### 手順3. 遷移のコードを記述する
 いよいよ遷移するよ。遷移の方法には冒頭で紹介した次の2パターンがあるよ。それぞれ解説するよ
-A. `NavigationController`のメソッド(`push`)で遷移  
-B. ViewControllerのメソッド(`present`)で遷移
 
-#### ・`NavigationController`のメソッドで遷移する方法
+-  `NavigationController`のメソッド(`push`)で遷移  
+-  ViewControllerのメソッド(`present`)で遷移
+
+#### ・ `NavigationController`のメソッドで遷移する方法
 1. 遷移元のViewControllerにNavigationControllerを埋め込む  
 「Editor」→「Embed In」→「Navigation Controller」と選びます
 ![Alt text](./embedin.png)
@@ -76,7 +76,8 @@ let storyboard = UIStoryboard(name: "Next",bundle: nil)
 guard let viewController =  storyboard.instantiateInitialViewController() as? NextViewController else { return }
 navigationController?.pushViewController(viewController, animated: true)
 ```
-#### ・`ViewController`のメソッドで遷移する方法
+
+#### ・ `ViewController`のメソッドで遷移する方法
 ```swift
 let storyboard = UIStoryboard(name: "Next",bundle: nil)
 guard let viewController =  storyboard.instantiateInitialViewController() as? NextViewController else { return }
