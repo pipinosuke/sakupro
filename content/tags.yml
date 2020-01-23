@@ -36,11 +36,6 @@
 #   icon: ./assets/images/tags/mobile.png
 #   featured: true
 
-- name: Swift
-  color: "#FC5326"
-  icon: ./assets/images/tags/swift.png
-  featured: true
-
 - name: iOSアプリ
   slugableName: ios
   color: "#3796DE"
@@ -114,6 +109,11 @@
 #   color: "#007acc"
 #   icon: ./assets/images/tags/slack.png
 #   featured: false
+
+- name: Swift
+  color: "#FC5326"
+  icon: ./assets/images/tags/swift.png
+  featured: true
 
 - name: お知らせ・その他
   slugableName: news
