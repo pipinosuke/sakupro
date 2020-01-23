@@ -4,7 +4,7 @@ path: ios-transition
 created: 2019-12-17T11:06:33.664Z
 updated: 2019-01-22T11:06:33.694Z
 excerpt: ここではコードで行う画面遷移の方法を解説しているよ。セグエを使った遷移よりもコードの遷移を使いこなせるようになると、複雑なアプリも作りやすいよ
-featuredImage: ../assets/thumbs/thumb_transition_ios.jpeg
+featuredImage: /content/assets/thumbs/thumb_transition_ios.jpg
 tags:
   - iOSアプリ
   - Swift
