@@ -2,7 +2,7 @@
 title: 【CarthageとCocoapods】 2種類のライブラリ管理ツールとその使い分けについて解説
 path: carthage-cocoapods
 created: 2019-12-27T12:57:21.342Z
-updated: 2020-01-04T12:57:21.364Z
+updated: 2020-01-22T12:57:21.364Z
 excerpt: >-
   iOSに限らずアプリ開発では何らかのライブラリを用いるのが普通だよ。iOS開発ではCarthageとCocoapods、二種類のライブラリ管理ツールが用意されており、ここではその使い分けについて解説しているよ。
 featuredImage: ../assets/thumbs/xcode.jpg

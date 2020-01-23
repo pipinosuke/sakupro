@@ -2,7 +2,7 @@
 title: 'Nibを活用しTableViewやCollectionViewでカスタムセルを使う方法を解説 '
 path: how-to-use-customized-cell-by-nib
 created: 2020-01-13T04:33:39.440Z
-updated: 2020-01-13T04:33:39.451Z
+updated: 2020-01-22T04:33:39.451Z
 excerpt: >
   UIKitにはテンプレート用のCellが既に用意されているけど、自前で実装したカスタムセルを使用することでより柔軟な実装が可能になるよ。そんなカスタムセルの使い方を今回はTableViewを例に解説するよ。
 featuredImage: ../assets/thumbs/xcode.jpg

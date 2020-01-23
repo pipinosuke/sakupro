@@ -2,7 +2,7 @@
 title: 【Delegate】CollectionViewをUIViewControllerで実装する方法を解説
 path: how-to-use-collection-view
 created: 2020-01-13T04:12:40.654Z
-updated: 2020-01-13T04:12:40.665Z
+updated: 2020-01-22T04:12:40.665Z
 excerpt: >-
   グリッド状に羅列することができるCollectionViewはTableViewと並んで頻繁に使うことになるパーツだよ。UIViewControllerでCollectionViewを実装する方法を解説するよ
 featuredImage: ../assets/thumbs/thumb_collection_view.png

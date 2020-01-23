@@ -2,7 +2,7 @@
 title: 【Delegate】TableViewをUIViewControllerで実装する方法を解説
 path: how-to-use-tableview
 created: 2019-12-27T14:14:17.247Z
-updated: 2019-01-05T14:14:17.261Z
+updated: 2019-01-22T14:14:17.261Z
 excerpt: アプリ開発においてもはやなくてはならないTableViewだけど、そのTableViewをUIViewController上に実装する方法を解説しているよ。
 featuredImage: ../assets/thumbs/thumb_tableview.jpg
 tags:
