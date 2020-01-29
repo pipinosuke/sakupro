@@ -1,5 +1,5 @@
 ---
-title: Swiftのoptinalについて。アンラップの仕方や他の型との違いを解説
+title: Swiftのoptionalについて。アンラップの仕方や他の型との違いを解説
 path: about-optional
 created: 2019-12-15T13:42:51.408Z
 updated: 2019-12-30T13:42:51.458Z
