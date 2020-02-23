@@ -1,7 +1,8 @@
 ---
 title: プライバシーポリシー
 path: "/privacy-policy"
-excerpt: 
+excerpt: fd
+featuredImage: ../assets/thumbs/xcode.jpg
 ---
 制定日：2019年10月11日<br>
 最終改訂日：2019年10月11日<br><br>
