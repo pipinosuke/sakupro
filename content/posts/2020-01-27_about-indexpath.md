@@ -42,15 +42,19 @@ struct IndexPath {
 	...
 }
 ```
-そしてその値は以下のように取り出すことができるよ。
 
-### ステップ1. 「`IndexPath`」の値を参照・取得する
+それぞれの値は以下のように取り出すことができるよ。
 ```swift
 print(indexPath.section) //セクション数
 print(indexPath.row)  //行数
 ```
-indexPath.sectionの値が1かつ、indexPath.rowの値が2であれば図の一番下のRowと特定できるよ。
 
+
+### ・メソッド内で「`IndexPath`」の値を参照・取得する
+頻繁にIndexPathを活用するメソッドとして挙げられるのがcellの中身を定義したり加工したりする際に呼び出す`cellForRowAt`だよ。例えば`cellForRowAt`内でセクション数と行数を取得することで下のようなTableViewを作ることができる。
+![enter image description here](https://i.gyazo.com/4345c7528ac18fa48e3226337e1da08c.png)
+
+#### サンプルコード
 ``` swift
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell()
@@ -61,11 +65,14 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     return cell
 }
 ```
-![enter image description here](https://i.gyazo.com/4345c7528ac18fa48e3226337e1da08c.png)
 
-### ステップ2. メソッド内で条件分岐する
- IndexPathの参照できれば、その値によって条件分岐が可能になるよ
 
+### ・メソッド内で条件分岐する
+ IndexPathが参照できれば、その値によって条件分岐が可能になるよ
+
+![indexPath sample](https://i.gyazo.com/3ff9463b5c1c3e9d4792c465dc3ba8dc.png)
+
+#### サンプルコード
 ``` swift
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell()
@@ -83,7 +90,6 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     return cell
 }
 ```
-![indexPath sample](https://i.gyazo.com/3ff9463b5c1c3e9d4792c465dc3ba8dc.png)
 
 #### ・応用
 別記事で掲載している[ハンズオン](#)に詳しく載っているのでそちらを参照
