@@ -5,7 +5,7 @@ created: 2020-02-23T05:27:52.614Z
 updated: 2020-02-23T05:27:52.664Z
 excerpt: >-
   iOSアプリ開発ではなくてはならないといってもいいUITableViewとUICollectionViewだけど、これらを理解する上で重要な概念が`IndexPath`だよ。初見では「IndexPathってなんだよ！！」って思った人も多いのではないかな？？  
-featuredImage: /content/assets/thumbs/thumb_indexpath.png
+featuredImage: ../assets/thumbs/thumb_indexpath.png
 tags:
   - iOSアプリ
 ---
