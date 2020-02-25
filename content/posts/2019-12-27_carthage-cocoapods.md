@@ -118,7 +118,7 @@ github "onevcat/Kingfisher"
 ####  2. ビルド
 Cartfileへの記述が終わったら次はビルドコマンドを打ち込むよ。
 ``` bash
-carthage install --platform iOS --no-use-binaries
+carthage update --platform iOS --no-use-binaries
 ```
 ビルドする際は`carthage install`にオプションを2つつけておくと良いです。簡単に解説すると`--platform iOS`のようにデバイスを指定することでビルド時間を短縮できます。`--no-use-binaries`を付けるとバイナリデータからのビルドではなく、ソースコードからコンパイルすることでビルドを行うことができます。そこそこ時間はかかります。
 
