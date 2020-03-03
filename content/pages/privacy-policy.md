@@ -1,7 +1,6 @@
 ---
 title: プライバシーポリシー
 path: privacy-policy
-featuredImage: ../assets/thumbs/xcode.jpg
 excerpt: このサイトのプライバシーポリシーについて解説
 
 ---
