@@ -1,6 +1,6 @@
 ---
 title: 免責事項
-path: "/law"
+path: law
 excerpt: このサイトの免責事項について解説
 featuredImage: ../assets/thumbs/xcode.jpg
 ---

@@ -1,6 +1,6 @@
 ---
 title: 当サイトとサクプロについて
-path: "/about"
+path: about
 excerpt: 自己紹介とこのサイトについてを解説しているよ
 featuredImage: ../assets/thumbs/xcode.jpg
 ---
