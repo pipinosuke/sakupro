@@ -1,4 +1,4 @@
-import {DefaultTheme} from '@nehalist/gatsby-theme-nehalem';
+import {DefaultTheme} from '@pipinosuke/gatsby-theme-nehalem';
 
 const Theme: DefaultTheme = {
   layout: {
