@@ -115,6 +115,11 @@
   icon: ./assets/images/tags/swift.png
   featured: true
 
+- name: SwiftUI
+  color: "##0E4FDE"
+  icon: ./assets/images/tags/swiftui.png
+  featured: false
+
 - name: お知らせ・その他
   slugableName: news
   color: "#3e3e3c"
