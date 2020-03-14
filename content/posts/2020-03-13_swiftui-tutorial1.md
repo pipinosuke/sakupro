@@ -2,14 +2,13 @@
 title: SwiftUI基本編① Creating and Combining Views
 path: swiftui-tutorial1
 created: 2020-03-13T00:38:26.453Z
-updated: 2020-03-13T00:38:26.488Z
+updated: 2020-03-15T00:38:26.488Z
 excerpt: >-
   この記事はSwiftUIのためのいくつか用意されている公式チュートリアルのうち、[【SwiftUI Essentials】Creating and
   Combining
   Views](https://developer.apple.com/tutorials/swiftui/creating-and-combining-views)の内容を自分なりにまとめたものになります。
-featuredImage: /content/assets/thumbs/swift-ui-eyecatch.png
+featuredImage: ../assets/thumbs/swift-ui-eyecatch.png
 tags:
-  - Swift
   - SwiftUI
 ---
 
