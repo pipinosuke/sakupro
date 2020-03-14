@@ -10,6 +10,7 @@ excerpt: >-
 featuredImage: /content/assets/thumbs/swift-ui-eyecatch.png
 tags:
   - Swift
+  - SwiftUI
 ---
 
 ### 注） プロジェクトの作成
