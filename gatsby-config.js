@@ -63,9 +63,9 @@ module.exports = {
           theme_color: `#a4cbb8`,
           display: `minimal-ui`,
           icon: `${__dirname}/content/assets/images/logo.png`
-        }
-      },
-      postsPerPage: 8
+        },
+        postsPerPage: 7
+      }
     },
     {
       resolve: "gatsby-plugin-google-analytics",
