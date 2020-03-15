@@ -110,15 +110,17 @@
 #   icon: ./assets/images/tags/slack.png
 #   featured: false
 
+
+- name: SwiftUI
+  color: "##0E4FDE"
+  icon: ./assets/images/tags/swiftui.png
+  featured: true
+
 - name: Swift
   color: "#FC5326"
   icon: ./assets/images/tags/swift.png
   featured: true
 
-- name: SwiftUI
-  color: "##0E4FDE"
-  icon: ./assets/images/tags/swiftui.png
-  featured: false
 
 - name: お知らせ・その他
   slugableName: news
