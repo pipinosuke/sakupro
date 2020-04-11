@@ -125,20 +125,8 @@ print(countCharacters(characters: "ああああ")) //実行結果: 4
 ```
 
 ### 補足
-#### 補足1: 引数名を省略するケース
-引数を`_`をつけることで
-```swift
-func countCharacters(_ characters: String) -> Int {
-	return characters.count
-}
-```
-呼び出しの際、引数を明示的に宣言せずともメソッドに値を渡すことができる。
-``` swift
-print(countCharacters("ああああ")) //実行結果: 4
-```
-
-#### 補足2： 引数が複数個存在するケース
-`apples`と`baskets`の二つが引数として存在している。
+#### 補足1： 引数が複数個存在するケース
+`apples`と`baskets`の二つが引数として存在している。その際の引数宣言は`,`で区切る。
 ```swift
 func countApplesInTheBaskets(apples: Int, baskets: Int) -> Int {
    let numberOfApples = apples * baskets
@@ -146,6 +134,35 @@ func countApplesInTheBaskets(apples: Int, baskets: Int) -> Int {
 }
 print(countApplesInTheBaskets(apples: 5, baskets: 3)) //実行結果: 15個です
 ```
+
+#### 補足2: 引数名を省略するケース
+このように引数宣言の前に`_`をつける。
+```swift
+func countCharacters(_ characters: String) -> Int {
+	return characters.count
+}
+```
+呼び出しの際、引数を明示的に宣言せずともメソッドに値を渡すことができる。
+``` swift
+let charactersNumber = countCharacters("ああああ")
+print(charactersNumber) //実行結果: 4
+```
+
+#### 補足3: 引数にデフォルトの値が設定されているケース
+引数宣言する際に値を代入する
+```swift
+func makeQery(_ query: String? = nil) -> [String: String?] {
+	return ["title":query]
+}
+```
+引数に渡してない場合は代入されていた値が渡される。
+
+``` swift
+print(makeQuery()) //実行結果: ["title":nil]
+print(makeQuery("Swift")) //実行結果: ["title":"Swift"]
+```
+通信絡みの実装で使われることが多い気がします。
+
  
 ## まとめ
 - メソッドは定義するだけでなく、それを呼び出す事で初めて実行される。
