@@ -3,8 +3,9 @@ title: 【iOS】UISearchBarで検索機能を実装する
 path: how-to-use-search-bar
 created: 2020-03-03T08:50:35.442Z
 updated: 2020-03-03T08:50:35.470Z
-excerpt: ここではSearchBarを使って検索機能を実装する方法を解説しているよ。主に通信処理などにも応用可能だよ
-featuredImage: ../assets/thumbs/スクリーンショット 2020-03-03 17.49.29.png
+excerpt: >-
+    ここではSearchBarを使って検索機能を実装する方法を解説しているよ。主に通信処理などにも応用可能だよ
+featuredImage: ../assets/thumbs/search.png
 tags:
   - iOSアプリ
 ---
